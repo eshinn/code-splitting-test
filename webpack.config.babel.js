@@ -1,3 +1,5 @@
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+
 module.exports = {
   entry: {
     'js/app': ['./src/app.js'],
@@ -14,4 +16,9 @@ module.exports = {
     ]
   },
   devtool: 'source-map',
+  plugins: [
+    new HTMLWebpackPlugin({
+      filename: 'index.html',
+    })
+  ]
 }
